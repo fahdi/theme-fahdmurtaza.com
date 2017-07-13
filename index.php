@@ -28,13 +28,15 @@
 			<?php 
 				// grab admin email and their photo
 				$admin_email = get_option('admin_email');
-				echo get_avatar( $admin_email, 100 ); 
+				echo get_avatar( $admin_email, 50 ); 
 			?>
-		</div><!--/ author -->
+		</div>
 		
 		<div id="brand">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &mdash; <span><?php echo get_bloginfo( 'description' ); ?></span></h1>
-		</div><!-- /brand -->
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<img width="200" src="<?php echo get_stylesheet_directory_uri(); ?>/logo.png">
+			</a>
+		</div>
 	
 		<nav role="navigation" class="site-navigation main-navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
